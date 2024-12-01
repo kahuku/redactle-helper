@@ -5,7 +5,7 @@ async function enterWordlist() {
     const submitButton = document.getElementById('submit');
 
     try {
-        const response = await fetch('https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/top-usernames-shortlist.txt');
+        const response = await fetch('https://raw.githubusercontent.com/kahuku/redactle-helper/refs/heads/main/wordlists/basic.txt');
         const text = await response.text();
         const words = text.split('\n');
         
