@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Redactle Helper",
+    "version": "1.0",
+    "description": "Insert the basic words we use at the beginning of every Redactle game",
+    "icons": {
+      "48": "assets/icon.png"
+    },
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://redactle.net/*"],
+        "js": ["script.js"]
+      }
+    ]
+}
