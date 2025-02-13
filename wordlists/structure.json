@@ -1,0 +1,4 @@
+{
+    "basic": ["lowercase.txt", "numbers.txt"],
+    "default": ["basic", "units.txt"]
+}
