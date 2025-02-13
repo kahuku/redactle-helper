@@ -44,12 +44,12 @@ function getWordlists(structure, path) {
 
     let arr = structure[path];
     if (arr === undefined) {
-        console.error(`Path ${path} not found in structure`);
-        return wordlists;
+        // console.error(`Path ${path} not found in structure`);
+        return [path];
     }
 
     for (let item of arr) {
-        if (length(item) >= 4 && item.slice(-4) === 'string') {
+        if (item.length >= 4 && item.slice(-4) === 'string') {
             wordlists.push(item);
         } else {
             wordlists = wordlists.concat(getWordlists(structure, item));
