@@ -20,9 +20,9 @@ async function enterWordlist(file) {
     inputField.focus();
 
     for (const word of words) {
-        inputField.value = '';
-        inputField.dispatchEvent(new Event('input', { bubbles: true }));
-        await new Promise(resolve => setTimeout(resolve, 50)); // Small delay
+        // inputField.value = '';
+        // inputField.dispatchEvent(new Event('input', { bubbles: true }));
+        // await new Promise(resolve => setTimeout(resolve, 50)); // Small delay
 
         inputField.value = word;
         inputField.dispatchEvent(new Event('input', { bubbles: true }));
