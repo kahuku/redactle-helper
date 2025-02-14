@@ -65,7 +65,7 @@ async function guess(path) {
 
     for (let wordlist of wordlists) {
         console.log(`Entering wordlist: ${wordlist}`);
-        // enterWordlist(wordlist);
+        enterWordlist(wordlist);
     }
 }
 
