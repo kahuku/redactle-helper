@@ -1,0 +1,10 @@
+roman
+greek
+english
+latin
+french
+german
+spanish
+church
+catholic
+war

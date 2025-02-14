@@ -8,15 +8,21 @@
 </head>
 <body>
     <h1>Redactle Helper</h1>
-    <p>Select a wordlist to enter words:</p>
-    <div class="button-container">
-        <button class="enter-words" data-list="lowercase.txt">Enter Letters</button>
-        <button class="enter-words" data-list="numbers.txt">Enter Numbers</button>
-        <button class="enter-words" data-list="basic">Enter Basic Words</button>
-        <button class="enter-words" data-list="default">Enter Default Words</button>
+    <p>Select wordlists to enter words:</p>
+    <div class="checkbox-container">
+        <label><input type="checkbox" class="wordlist" value="lowercase.txt">Letters</label><br>
+        <label><input type="checkbox" class="wordlist" value="numbers.txt">Numbers</label><br>
+        <label><input type="checkbox" class="wordlist" value="ordinals.txt">Ordinal Numbers</label><br>
+        <label><input type="checkbox" class="wordlist" value="directions.txt">Directions</label><br>
+        <label><input type="checkbox" class="wordlist" value="units.txt">Units</label><br>
+        <label><input type="checkbox" class="wordlist" value="months.txt">Months</label><br>
+        <label><input type="checkbox" class="wordlist" value="places.txt">Places</label><br>
+        <label><input type="checkbox" class="wordlist" value="places.txt">Names</label><br>
+        <label><input type="checkbox" class="wordlist" value="headings.txt">Section Headings</label><br>
+        <label><input type="checkbox" class="wordlist" value="tactical.txt">Tactical</label><br>
+        <label><input type="checkbox" class="wordlist" value="banana.txt">Banana</label><br>
     </div>
+    <button id="enter-selected">Enter Selected Words</button>
     <script src="popup.js"></script>
 </body>
 </html>
-
-<!-- Have a weird bug that first words aren't always input (esp 0 in numbers.txt) so as a temp fix, I duplicated the first word in each list -->
