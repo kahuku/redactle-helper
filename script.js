@@ -1,10 +1,23 @@
-async function fetchWordlist(file) {
-    const url = `https://raw.githubusercontent.com/kahuku/redactle-helper/refs/heads/main/wordlists/${file}`;
+// async function fetchWordlist(file) {
+//     const url = `https://raw.githubusercontent.com/kahuku/redactle-helper/refs/heads/main/wordlists/${file}`;
     
+//     try {
+//         const response = await fetch(url);
+//         const text = await response.text();
+//         return text.split('\n').filter(word => word.trim() !== '');
+//     } catch (error) {
+//         console.error(`Error fetching ${file}:`, error);
+//         return [];
+//     }
+// }
+
+async function fetchWordlist(file) {
+    const url = chrome.runtime.getURL(`wordlists/${file}`);
+
     try {
         const response = await fetch(url);
         const text = await response.text();
-        return text.split('\n').filter(word => word.trim() !== ''); // Clean empty lines
+        return text.split('\n').filter(word => word.trim() !== '');
     } catch (error) {
         console.error(`Error fetching ${file}:`, error);
         return [];
@@ -28,8 +41,18 @@ async function enterWordlist(file) {
     }
 }
 
+// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+//     if (request.action === "enterWords") {
+//         request.lists.forEach(list => enterWordlist(list));
+//     }
+// });
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "enterWords") {
-        request.lists.forEach(list => enterWordlist(list));
+        (async () => {
+            for (const l of request.lists) {
+                await enterWordlist(l);
+            }
+        })();
     }
 });

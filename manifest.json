@@ -18,5 +18,11 @@
         "matches": ["*://redactle.net/*"],
         "js": ["script.js"]
       }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["wordlists/*.txt"],
+        "matches": ["<all_urls>"]
+      }
     ]
 }

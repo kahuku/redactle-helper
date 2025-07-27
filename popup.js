@@ -11,3 +11,15 @@ document.getElementById('enter-selected').addEventListener('click', () => {
         chrome.tabs.sendMessage(tabs[0].id, { action: "enterWords", lists: selectedLists });
     });
 });
+
+document.querySelectorAll('.parent-checkbox').forEach(parent => {
+    parent.addEventListener('change', () => {
+        const fieldset = parent.closest('fieldset');
+        const childCheckboxes = fieldset.querySelectorAll('.wordlist');
+        childCheckboxes.forEach(child => {
+            child.checked = parent.checked;
+        });
+    });
+
+    parent.dispatchEvent(new Event('change'));
+});

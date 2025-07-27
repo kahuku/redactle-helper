@@ -10,17 +10,30 @@
     <h1>Redactle Helper</h1>
     <p>Select wordlists to enter words:</p>
     <div class="checkbox-container">
-        <label><input type="checkbox" class="wordlist" value="lowercase.txt">Letters</label><br>
-        <label><input type="checkbox" class="wordlist" value="numbers.txt">Numbers</label><br>
-        <label><input type="checkbox" class="wordlist" value="ordinals.txt">Ordinal Numbers</label><br>
-        <label><input type="checkbox" class="wordlist" value="directions.txt">Directions</label><br>
-        <label><input type="checkbox" class="wordlist" value="units.txt">Units</label><br>
-        <label><input type="checkbox" class="wordlist" value="months.txt">Months</label><br>
-        <label><input type="checkbox" class="wordlist" value="places.txt">Places</label><br>
-        <label><input type="checkbox" class="wordlist" value="places.txt">Names</label><br>
-        <label><input type="checkbox" class="wordlist" value="headings.txt">Section Headings</label><br>
-        <label><input type="checkbox" class="wordlist" value="tactical.txt">Tactical</label><br>
-        <label><input type="checkbox" class="wordlist" value="banana.txt">Banana</label><br>
+        <fieldset>
+            <legend><label><input type="checkbox" class="parent-checkbox" checked> Common Words</label></legend>
+            <label><input type="checkbox" class="wordlist child-common" value="basic.txt"> Basics</label><br>
+            <label><input type="checkbox" class="wordlist child-common" value="lowercase.txt"> Letters</label><br>
+            <label><input type="checkbox" class="wordlist child-common" value="numbers.txt"> Numbers</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><label><input type="checkbox" class="parent-checkbox" checked> Contextual Terms</label></legend>
+            <label><input type="checkbox" class="wordlist child-context" value="directions.txt"> Directions</label><br>
+            <label><input type="checkbox" class="wordlist child-context" value="units.txt"> Units</label><br>
+            <label><input type="checkbox" class="wordlist child-context" value="months.txt"> Months</label><br>
+            <label><input type="checkbox" class="wordlist child-context" value="places.txt"> Places</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><label><input type="checkbox" class="parent-checkbox"> Specialized</label></legend>
+            <label><input type="checkbox" class="wordlist child-special" value="headings.txt"> Section Headings</label><br>
+            <label><input type="checkbox" class="wordlist child-special" value="tactical.txt"> Tactical</label><br>
+        </fieldset>
+
+        <fieldset id="banana-group">
+            <b><label><input type="checkbox" class="wordlist child-banana" value="banana.txt" checked disabled> Banana</label></b><br>
+        </fieldset>
     </div>
     <button id="enter-selected">Enter Selected Words</button>
     <script src="popup.js"></script>
