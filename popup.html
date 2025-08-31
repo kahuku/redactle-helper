@@ -66,8 +66,19 @@
   </div>
 
   <div id="tab-review" class="tab-panel" role="tabpanel" aria-labelledby="tab-review" hidden>
-    <h2>Review words</h2>
-    <p>(Coming soon)</p>
+    <div class="review-header">
+      <h2>Review words</h2>
+      <button id="refresh-top-words" title="Refresh top words">Refresh</button>
+    </div>
+
+    <table id="review-table" class="review-table">
+      <thead>
+        <tr><th>#</th><th>Word</th><th>Hits</th></tr>
+      </thead>
+      <tbody id="review-tbody">
+        <tr><td colspan="3" class="muted">No data yet. Click Refresh.</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <script src="popup.js"></script>

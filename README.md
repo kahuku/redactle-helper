@@ -1,7 +1,7 @@
 # redactle-helper
 
-# Explanations
-## `default-words.txt`
+## Explanations
+### `default-words.txt`
 A reference list of the words that are already populated when starting a new game of Redactle
 
 # TODO

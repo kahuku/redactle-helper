@@ -3,6 +3,7 @@ body {
     background: #f8f9fa;
     text-align: center;
     padding: 15px;
+    padding-top: 5px;
     width: 250px;
 }
 
@@ -91,3 +92,43 @@ legend {
 .tab-panel.active {
   display: block;
 }
+
+#enter-selected {
+  display: block;
+  margin: 12px auto;
+}
+
+/* --- Review tab --- */
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.review-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.review-table th,
+.review-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.review-table th:first-child,
+.review-table td:first-child,
+.review-table th:last-child,
+.review-table td:last-child {
+  text-align: right;
+}
+
+.review-table th:nth-child(2),
+.review-table td:nth-child(2) {
+  text-align: left;
+}
+
+.muted { color: #777; font-style: italic; }
