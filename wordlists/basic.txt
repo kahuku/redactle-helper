@@ -1,6 +1,7 @@
 he
 she
 their
+them
 not
 do
 can
@@ -31,3 +32,5 @@ beginning
 end
 final
 last
+know
+no

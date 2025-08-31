@@ -9,3 +9,8 @@ american
 canada
 australia
 oceania
+european
+asian
+african
+pacific
+atlantic

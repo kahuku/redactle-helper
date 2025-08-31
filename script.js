@@ -29,6 +29,11 @@ async function enterWordlist(file) {
 }
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    const arrowButton = document.querySelector("#guess-tail-arrow button");
+    if (arrowButton) {
+        arrowButton.style.background = "transparent";
+    }
+
     if (request.action === "enterWords") {
         (async () => {
             for (const l of request.lists) {

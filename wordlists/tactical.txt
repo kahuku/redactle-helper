@@ -8,3 +8,7 @@ spanish
 church
 catholic
 war
+art
+species
+water
+system

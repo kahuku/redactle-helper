@@ -10,6 +10,8 @@ document.getElementById('enter-selected').addEventListener('click', () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.sendMessage(tabs[0].id, { action: "enterWords", lists: selectedLists });
     });
+
+    window.close();
 });
 
 document.querySelectorAll('.parent-checkbox').forEach(parent => {
