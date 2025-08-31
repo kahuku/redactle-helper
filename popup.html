@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redactle Helper</title>
-    <link rel="stylesheet" href="popup.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redactle Helper</title>
+  <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
-    <h1>Redactle Helper</h1>
+  <h1>Redactle Helper</h1>
+
+  <!-- Tabs header -->
+  <div class="tabs" role="tablist" aria-label="Popup tabs">
+    <button class="tab active" data-tab="enter" role="tab" aria-selected="true" aria-controls="tab-enter">Enter words</button>
+    <button class="tab" data-tab="review" role="tab" aria-selected="false" aria-controls="tab-review">Review words</button>
+  </div>
+
+  <!-- Tab panels -->
+  <div id="tab-enter" class="tab-panel active" role="tabpanel" aria-labelledby="tab-enter">
     <p>Select wordlists to enter words:</p>
+
     <div class="checkbox-container">
-        <fieldset>
-            <legend><label><input type="checkbox" class="parent-checkbox" checked> Common Words</label></legend>
-            <label><input type="checkbox" class="wordlist child-common" value="basic.txt"> Basics</label><br>
-            <label><input type="checkbox" class="wordlist child-common" value="lowercase.txt"> Letters</label><br>
-            <label><input type="checkbox" class="wordlist child-common" value="numbers.txt"> Numbers</label><br>
-        </fieldset>
+      <fieldset>
+        <legend>
+          <label>
+            <input type="checkbox" class="parent-checkbox" checked />
+            Common Words
+          </label>
+        </legend>
+        <label><input type="checkbox" class="wordlist child-common" value="basic.txt" /> Basics</label><br />
+        <label><input type="checkbox" class="wordlist child-common" value="lowercase.txt" /> Letters</label><br />
+        <label><input type="checkbox" class="wordlist child-common" value="numbers.txt" /> Numbers</label><br />
+      </fieldset>
 
-        <fieldset>
-            <legend><label><input type="checkbox" class="parent-checkbox" checked> Contextual Terms</label></legend>
-            <label><input type="checkbox" class="wordlist child-context" value="directions.txt"> Directions</label><br>
-            <label><input type="checkbox" class="wordlist child-context" value="units.txt"> Units</label><br>
-            <label><input type="checkbox" class="wordlist child-context" value="months.txt"> Months</label><br>
-            <label><input type="checkbox" class="wordlist child-context" value="places.txt"> Places</label><br>
-        </fieldset>
+      <fieldset>
+        <legend>
+          <label>
+            <input type="checkbox" class="parent-checkbox" checked />
+            Contextual Terms
+          </label>
+        </legend>
+        <label><input type="checkbox" class="wordlist child-context" value="directions.txt" /> Directions</label><br />
+        <label><input type="checkbox" class="wordlist child-context" value="units.txt" /> Units</label><br />
+        <label><input type="checkbox" class="wordlist child-context" value="months.txt" /> Months</label><br />
+        <label><input type="checkbox" class="wordlist child-context" value="places.txt" /> Places</label><br />
+      </fieldset>
 
-        <fieldset>
-            <legend><label><input type="checkbox" class="parent-checkbox"> Specialized</label></legend>
-            <label><input type="checkbox" class="wordlist child-special" value="headings.txt"> Section Headings</label><br>
-            <label><input type="checkbox" class="wordlist child-special" value="tactical.txt"> Tactical</label><br>
-            <label><input type="checkbox" class="wordlist child-context" value="years.txt"> Years</label><br>
-        </fieldset>
+      <fieldset>
+        <legend>
+          <label>
+            <input type="checkbox" class="parent-checkbox" />
+            Specialized
+          </label>
+        </legend>
+        <label><input type="checkbox" class="wordlist child-special" value="headings.txt" /> Section Headings</label><br />
+        <label><input type="checkbox" class="wordlist child-special" value="tactical.txt" /> Tactical</label><br />
+        <label><input type="checkbox" class="wordlist child-context" value="years.txt" /> Years</label><br />
+      </fieldset>
 
-        <fieldset id="banana-group">
-            <b><label><input type="checkbox" class="wordlist child-banana" value="banana.txt" checked disabled> Banana</label></b><br>
-        </fieldset>
+      <fieldset id="banana-group">
+        <b><label><input type="checkbox" class="wordlist child-banana" value="banana.txt" checked disabled /> Banana</label></b><br />
+      </fieldset>
     </div>
+
     <button id="enter-selected">Enter Selected Words</button>
-    <script src="popup.js"></script>
+  </div>
+
+  <div id="tab-review" class="tab-panel" role="tabpanel" aria-labelledby="tab-review" hidden>
+    <h2>Review words</h2>
+    <p>(Coming soon)</p>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>

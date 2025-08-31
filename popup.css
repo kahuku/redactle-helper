@@ -58,3 +58,36 @@ legend {
 #banana-group {
     border: none
 }
+
+/* --- Tabs --- */
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.tab {
+  background: #e9ecef;
+  color: #333;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.tab.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.tab-panel {
+  text-align: left;
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
